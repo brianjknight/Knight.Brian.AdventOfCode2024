@@ -56,16 +56,13 @@ public class Day4 {
 			int c = col;
 			
 			while (r < maxRow && c < maxCol) {
-				diag.append(input2D[r][c]);
-				r++;
-				c++;
+				diag.append(input2D[r++][c++]);
 			}
 			
 			diagLeftToRight.add(diag.toString());
 		}
 		
-		// Diagonals Left to Right decreasing rows
-		// first row already appended
+		// Diagonals Left to Right decreasing rows (first row already appended)
 		for (int row=1; row<maxRow; row++) {
 			StringBuilder diag = new StringBuilder();
 			
@@ -73,9 +70,7 @@ public class Day4 {
 			int c = 0;
 			
 			while (r < maxRow && c < maxCol) {
-				diag.append(input2D[r][c]);
-				r++;
-				c++;
+				diag.append(input2D[r++][c++]);
 			}
 			
 			diagLeftToRight.add(diag.toString());
@@ -98,9 +93,7 @@ public class Day4 {
 			int c=col;
 			
 			while (r < maxRow && c >= 0) {
-				diag.append(input2D[r][c]);
-				r++;
-				c--;
+				diag.append(input2D[r++][c--]);
 			}
 			
 			diagRightToLeft.add(diag.toString());
@@ -114,9 +107,7 @@ public class Day4 {
 			int c=maxCol-1;
 			
 			while (r < maxRow && c >= 0) {
-				diag.append(input2D[r][c]);
-				r++;
-				c--;
+				diag.append(input2D[r++][c--]);
 			}
 			
 			diagRightToLeft.add(diag.toString());
